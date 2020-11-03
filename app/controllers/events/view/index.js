@@ -27,16 +27,8 @@ export default class extends Controller.extend(EmberTableControllerMixin) {
         name          : 'Level',
         valuePath     : 'level',
         cellComponent : 'ui-table/cell/cell-sponsor-sanitize'
-      },
-      {
-        name          : 'Options',
-        valuePath     : 'id',
-        cellComponent : 'ui-table/cell/cell-sponsor-options',
-        actions       : {
-          editSponsor   : this.editSponsor.bind(this),
-          deleteSponsor : this.deleteSponsor.bind(this)
-        }
       }
+
     ];
   }
 
@@ -68,4 +60,3 @@ export default class extends Controller.extend(EmberTableControllerMixin) {
     this.transitionToRoute('events.view.edit.sponsors');
   }
 }
-
